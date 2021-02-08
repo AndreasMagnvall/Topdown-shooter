@@ -1,0 +1,2 @@
+valgrind --suppressions=suppressions.txt ./sfml
+

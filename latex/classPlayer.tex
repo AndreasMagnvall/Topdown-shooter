@@ -1,0 +1,101 @@
+\hypertarget{classPlayer}{}\section{Player Class Reference}
+\label{classPlayer}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+
+
+Inheritance diagram for Player\+:
+% FIG 0
+
+
+Collaboration diagram for Player\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPlayer_a3bd9be84b1533f4ab0a6cb9030ec84da}{Player} (std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$ \hyperlink{classObject_a8b1724482fb412feb64a638038161b7a}{position}, std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$ \hyperlink{classObject_ac8bfde5d0428d9c091854fe1a09b7d9f}{size}, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \hyperlink{classObject_a8ff6491b841d0f48da3d98041fbca934}{texture}, sf\+::\+Render\+Window $\ast$\hyperlink{classObject_a5c6cfc086ea1e39e0b3cf8633a763bf8}{window}, int \hyperlink{classCharacter_a273353643988a87a0ce03cff3870b2d9}{hp})
+\item 
+bool \hyperlink{classPlayer_aedcb14b7e42d95d6b1fdb7dd6879dd2b}{is\+\_\+invincible} () const
+\item 
+void \hyperlink{classPlayer_a8ca5d55325b3037c2123b88f1bd3412d}{set\+\_\+invincibility} (bool status)
+\item 
+std\+::string \hyperlink{classPlayer_a25be60a0655359b66a05657d6ccaa537}{check\+\_\+input} () const
+\item 
+void \hyperlink{classPlayer_ace418f6e52cafc354f57268cfe4b646a}{move} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classObject}{Object} $>$$>$ collision\+\_\+list) override
+\item 
+void \hyperlink{classPlayer_acaadb9db9181983bc036ded7f932a65e}{check\+\_\+shoot} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classMovable__Obj}{Movable\+\_\+\+Obj} $>$$>$ $\ast$bullet\+\_\+list, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ bullet\+\_\+texture)
+\item 
+void \hyperlink{classPlayer_a18996f72627e846529e741e4f8efb3dd}{draw\+\_\+object} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class responsible for some basic character functions and separating it from other game objects 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPlayer_a3bd9be84b1533f4ab0a6cb9030ec84da}\label{classPlayer_a3bd9be84b1533f4ab0a6cb9030ec84da}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\subsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$}]{position,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$}]{size,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture,  }\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlayer_a25be60a0655359b66a05657d6ccaa537}\label{classPlayer_a25be60a0655359b66a05657d6ccaa537}} 
+\index{Player@{Player}!check\+\_\+input@{check\+\_\+input}}
+\index{check\+\_\+input@{check\+\_\+input}!Player@{Player}}
+\subsubsection{\texorpdfstring{check\+\_\+input()}{check\_input()}}
+{\footnotesize\ttfamily std\+::string Player\+::check\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a string naming a direction based on keyboard input. \mbox{\Hypertarget{classPlayer_acaadb9db9181983bc036ded7f932a65e}\label{classPlayer_acaadb9db9181983bc036ded7f932a65e}} 
+\index{Player@{Player}!check\+\_\+shoot@{check\+\_\+shoot}}
+\index{check\+\_\+shoot@{check\+\_\+shoot}!Player@{Player}}
+\subsubsection{\texorpdfstring{check\+\_\+shoot()}{check\_shoot()}}
+{\footnotesize\ttfamily void Player\+::check\+\_\+shoot (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classMovable__Obj}{Movable\+\_\+\+Obj} $>$$>$ $\ast$}]{bullet\+\_\+list,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{bullet\+\_\+texture }\end{DoxyParamCaption})}
+
+Checks if the player should shoot and if so, creates a bullet object at the players position with the players angle and using the input bullet\+\_\+texture as its graphic.
+
+After \char`\"{}shooting\char`\"{} the bullet, places the bullet object in the list object bullet\+\_\+list. \mbox{\Hypertarget{classPlayer_a18996f72627e846529e741e4f8efb3dd}\label{classPlayer_a18996f72627e846529e741e4f8efb3dd}} 
+\index{Player@{Player}!draw\+\_\+object@{draw\+\_\+object}}
+\index{draw\+\_\+object@{draw\+\_\+object}!Player@{Player}}
+\subsubsection{\texorpdfstring{draw\+\_\+object()}{draw\_object()}}
+{\footnotesize\ttfamily void Player\+::draw\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draws the player objects graphic on the associated window.
+
+Changes the color of the graphic depending on if the player is invincible or not. 
+
+Reimplemented from \hyperlink{classObject_a87b1a93e287279985c45941c3e78fed4}{Object}.
+
+\mbox{\Hypertarget{classPlayer_aedcb14b7e42d95d6b1fdb7dd6879dd2b}\label{classPlayer_aedcb14b7e42d95d6b1fdb7dd6879dd2b}} 
+\index{Player@{Player}!is\+\_\+invincible@{is\+\_\+invincible}}
+\index{is\+\_\+invincible@{is\+\_\+invincible}!Player@{Player}}
+\subsubsection{\texorpdfstring{is\+\_\+invincible()}{is\_invincible()}}
+{\footnotesize\ttfamily bool Player\+::is\+\_\+invincible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns true if the player is \char`\"{}invincible\char`\"{}. \mbox{\Hypertarget{classPlayer_ace418f6e52cafc354f57268cfe4b646a}\label{classPlayer_ace418f6e52cafc354f57268cfe4b646a}} 
+\index{Player@{Player}!move@{move}}
+\index{move@{move}!Player@{Player}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Player\+::move (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classObject}{Object} $>$$>$}]{collision\+\_\+list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Uses the function \char`\"{}prepare\+\_\+move\char`\"{}. Collision is checked with the objects in the vector collision\+\_\+list. 
+
+Implements \hyperlink{classCharacter_a91211cae08aab6a74b43377e4463283a}{Character}.
+
+\mbox{\Hypertarget{classPlayer_a8ca5d55325b3037c2123b88f1bd3412d}\label{classPlayer_a8ca5d55325b3037c2123b88f1bd3412d}} 
+\index{Player@{Player}!set\+\_\+invincibility@{set\+\_\+invincibility}}
+\index{set\+\_\+invincibility@{set\+\_\+invincibility}!Player@{Player}}
+\subsubsection{\texorpdfstring{set\+\_\+invincibility()}{set\_invincibility()}}
+{\footnotesize\ttfamily void Player\+::set\+\_\+invincibility (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})}
+
+Set the invincibility status of the player. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\hyperlink{Player_8h}{Player.\+h}\item 
+source/\hyperlink{Player_8cpp}{Player.\+cpp}\end{DoxyCompactItemize}

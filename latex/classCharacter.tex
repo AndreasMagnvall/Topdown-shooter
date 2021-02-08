@@ -1,0 +1,87 @@
+\hypertarget{classCharacter}{}\section{Character Class Reference}
+\label{classCharacter}\index{Character@{Character}}
+
+
+{\ttfamily \#include $<$Character.\+h$>$}
+
+
+
+Inheritance diagram for Character\+:
+% FIG 0
+
+
+Collaboration diagram for Character\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCharacter_a756e9c6ac793958b9028808abdbee2bd}{Character} (std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$ \hyperlink{classObject_a8b1724482fb412feb64a638038161b7a}{position}, std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$ \hyperlink{classObject_ac8bfde5d0428d9c091854fe1a09b7d9f}{size}, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$\hyperlink{classObject_a8ff6491b841d0f48da3d98041fbca934}{texture}, sf\+::\+Render\+Window $\ast$\hyperlink{classObject_a5c6cfc086ea1e39e0b3cf8633a763bf8}{window}, std\+::string \hyperlink{classMovable__Obj_a4f4eb3171656831c1f0b8dbab2b2a00c}{direction}, int \hyperlink{classCharacter_a273353643988a87a0ce03cff3870b2d9}{hp})
+\item 
+int \hyperlink{classCharacter_a2505da59bef541d2224af270010d03b5}{get\+\_\+hp} () const
+\item 
+void \hyperlink{classCharacter_aeda14114ec98feafd872b9b9b8e0644c}{decrease\+\_\+hp} (int damage)
+\item 
+virtual void \hyperlink{classCharacter_a91211cae08aab6a74b43377e4463283a}{move} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classObject}{Object} $>$$>$ collision\+\_\+list)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCharacter_a273353643988a87a0ce03cff3870b2d9}{hp}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classObject}{Object} class responsible for representing a character. Also handles some minor health mechanics. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCharacter_a756e9c6ac793958b9028808abdbee2bd}\label{classCharacter_a756e9c6ac793958b9028808abdbee2bd}} 
+\index{Character@{Character}!Character@{Character}}
+\index{Character@{Character}!Character@{Character}}
+\subsubsection{\texorpdfstring{Character()}{Character()}}
+{\footnotesize\ttfamily Character\+::\+Character (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$}]{position,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$}]{size,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture,  }\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{std\+::string}]{direction,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCharacter_aeda14114ec98feafd872b9b9b8e0644c}\label{classCharacter_aeda14114ec98feafd872b9b9b8e0644c}} 
+\index{Character@{Character}!decrease\+\_\+hp@{decrease\+\_\+hp}}
+\index{decrease\+\_\+hp@{decrease\+\_\+hp}!Character@{Character}}
+\subsubsection{\texorpdfstring{decrease\+\_\+hp()}{decrease\_hp()}}
+{\footnotesize\ttfamily void Character\+::decrease\+\_\+hp (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})}
+
+Decreases the characters hp by the input damage. \mbox{\Hypertarget{classCharacter_a2505da59bef541d2224af270010d03b5}\label{classCharacter_a2505da59bef541d2224af270010d03b5}} 
+\index{Character@{Character}!get\+\_\+hp@{get\+\_\+hp}}
+\index{get\+\_\+hp@{get\+\_\+hp}!Character@{Character}}
+\subsubsection{\texorpdfstring{get\+\_\+hp()}{get\_hp()}}
+{\footnotesize\ttfamily int Character\+::get\+\_\+hp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the characters current hp value. \mbox{\Hypertarget{classCharacter_a91211cae08aab6a74b43377e4463283a}\label{classCharacter_a91211cae08aab6a74b43377e4463283a}} 
+\index{Character@{Character}!move@{move}}
+\index{move@{move}!Character@{Character}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily virtual void Character\+::move (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classObject}{Object} $>$$>$}]{collision\+\_\+list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract function. Uses the function \char`\"{}prepare\+\_\+move\char`\"{} or \char`\"{}prepare\+\_\+move\+\_\+to\+\_\+obj\char`\"{}. 
+
+Implements \hyperlink{classMovable__Obj_a7bc9fbcd4dede97c2fae66c0502c8ead}{Movable\+\_\+\+Obj}.
+
+
+
+Implemented in \hyperlink{classPlayer_ace418f6e52cafc354f57268cfe4b646a}{Player}, and \hyperlink{classEnemy_a8e842aa8ab6c75f2c9d71c6c3f43d88c}{Enemy}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCharacter_a273353643988a87a0ce03cff3870b2d9}\label{classCharacter_a273353643988a87a0ce03cff3870b2d9}} 
+\index{Character@{Character}!hp@{hp}}
+\index{hp@{hp}!Character@{Character}}
+\subsubsection{\texorpdfstring{hp}{hp}}
+{\footnotesize\ttfamily int Character\+::hp\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\hyperlink{Character_8h}{Character.\+h}\item 
+source/\hyperlink{Character_8cpp}{Character.\+cpp}\end{DoxyCompactItemize}

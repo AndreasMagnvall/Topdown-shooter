@@ -1,0 +1,53 @@
+\hypertarget{classBullet}{}\section{Bullet Class Reference}
+\label{classBullet}\index{Bullet@{Bullet}}
+
+
+{\ttfamily \#include $<$Bullet.\+h$>$}
+
+
+
+Inheritance diagram for Bullet\+:
+% FIG 0
+
+
+Collaboration diagram for Bullet\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBullet_acde2d08c971829da1e9fb565635dce3d}{Bullet} (std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$ \hyperlink{classObject_a8b1724482fb412feb64a638038161b7a}{position}, std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$ \hyperlink{classObject_ac8bfde5d0428d9c091854fe1a09b7d9f}{size}, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \hyperlink{classObject_a8ff6491b841d0f48da3d98041fbca934}{texture}, sf\+::\+Render\+Window $\ast$\hyperlink{classObject_a5c6cfc086ea1e39e0b3cf8633a763bf8}{window}, std\+::string \hyperlink{classMovable__Obj_a4f4eb3171656831c1f0b8dbab2b2a00c}{direction})
+\item 
+void \hyperlink{classBullet_a00c0fec9c45ab1ab2b5883404d1bda62}{move} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classObject}{Object} $>$$>$ collision\+\_\+list) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classMovable__Obj}{Movable\+\_\+\+Obj} class responsible for representing the bullet which the player character fires. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBullet_acde2d08c971829da1e9fb565635dce3d}\label{classBullet_acde2d08c971829da1e9fb565635dce3d}} 
+\index{Bullet@{Bullet}!Bullet@{Bullet}}
+\index{Bullet@{Bullet}!Bullet@{Bullet}}
+\subsubsection{\texorpdfstring{Bullet()}{Bullet()}}
+{\footnotesize\ttfamily Bullet\+::\+Bullet (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$}]{position,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Vector2f $>$}]{size,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture,  }\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{std\+::string}]{direction }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBullet_a00c0fec9c45ab1ab2b5883404d1bda62}\label{classBullet_a00c0fec9c45ab1ab2b5883404d1bda62}} 
+\index{Bullet@{Bullet}!move@{move}}
+\index{move@{move}!Bullet@{Bullet}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Bullet\+::move (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classObject}{Object} $>$$>$}]{collision\+\_\+list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Uses the function \char`\"{}prepare\+\_\+move\char`\"{}. Collision is checked with the objects in the vector collision\+\_\+list. 
+
+Implements \hyperlink{classMovable__Obj_a7bc9fbcd4dede97c2fae66c0502c8ead}{Movable\+\_\+\+Obj}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\hyperlink{Bullet_8h}{Bullet.\+h}\item 
+source/\hyperlink{Bullet_8cpp}{Bullet.\+cpp}\end{DoxyCompactItemize}
